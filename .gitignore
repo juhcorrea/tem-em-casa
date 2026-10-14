@@ -1,0 +1,15 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*service-account*.json
+firebase-debug.log
+firestore-debug.log
+*.log
+.DS_Store
+Thumbs.db
+work/netlify-deploy/
+work/netlify-deploy.zip
+work/final-validation.txt

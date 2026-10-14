@@ -1,0 +1,8 @@
+const fs=require('node:fs'),path=require('node:path');
+const root=path.join(__dirname,'..'),out=path.join(root,'outputs'),dest=path.join(__dirname,'netlify-deploy');
+const names=['index.html','_headers','manifest.webmanifest','apple-touch-icon.png','icon-192.png','icon-512.png','favicon.ico','favicon.svg'];
+fs.mkdirSync(dest,{recursive:true});for(const name of fs.readdirSync(dest))if(!names.includes(name))throw Error('Unexpected file in deploy directory: '+name);
+const crc32=data=>{let c=0xffffffff;for(const b of data){c^=b;for(let j=0;j<8;j++)c=(c>>>1)^((c&1)?0xedb88320:0);}return(c^0xffffffff)>>>0;};
+const local=[],central=[];let offset=0;
+for(const name of names){const data=fs.readFileSync(path.join(out,name));fs.writeFileSync(path.join(dest,name),data);const nm=Buffer.from(name),crc=crc32(data),lh=Buffer.alloc(30),ch=Buffer.alloc(46);lh.writeUInt32LE(0x04034b50,0);lh.writeUInt16LE(20,4);lh.writeUInt16LE(33,12);lh.writeUInt32LE(crc,14);lh.writeUInt32LE(data.length,18);lh.writeUInt32LE(data.length,22);lh.writeUInt16LE(nm.length,26);ch.writeUInt32LE(0x02014b50,0);ch.writeUInt16LE(20,4);ch.writeUInt16LE(20,6);ch.writeUInt16LE(33,14);ch.writeUInt32LE(crc,16);ch.writeUInt32LE(data.length,20);ch.writeUInt32LE(data.length,24);ch.writeUInt16LE(nm.length,28);ch.writeUInt32LE(offset,42);local.push(lh,nm,data);central.push(ch,nm);offset+=lh.length+nm.length+data.length;}
+const cd=Buffer.concat(central),end=Buffer.alloc(22);end.writeUInt32LE(0x06054b50,0);end.writeUInt16LE(names.length,8);end.writeUInt16LE(names.length,10);end.writeUInt32LE(cd.length,12);end.writeUInt32LE(offset,16);const zip=Buffer.concat([...local,cd,end]);fs.writeFileSync(path.join(__dirname,'netlify-deploy.zip'),zip);console.log(JSON.stringify({files:names,bytes:zip.length}));

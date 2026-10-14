@@ -1,0 +1,9 @@
+/*
+  X-Content-Type-Options: nosniff
+
+/
+  Cache-Control: no-cache, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: no-cache, max-age=0, must-revalidate
+

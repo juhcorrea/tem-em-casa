@@ -1,0 +1,76 @@
+TEM EM CASA? — FIREBASE E SITE PUBLICADO
+
+Acesse: https://tememcasa-listas.netlify.app/
+
+PROJETO ESCOLHIDO
+
+Nome: tememcasa
+ID: tememcasa-2ab29
+Aplicativo Web: tememcasaweb
+Plano observado no console: Spark
+
+Este projeto é próprio do app de compras e fica separado do app financeiro. Ao abrir https://console.firebase.google.com/, confira o ID antes de alterar configurações.
+
+O QUE JÁ FOI CONFIRMADO
+
+- Aplicativo Web criado.
+- Login com e-mail e senha ativado; login por link sem senha permanece desligado.
+- Configuração pública salva em work/firebase-config.js e incorporada ao HTML final.
+- Firestore Standard, banco (default), criado em southamerica-east1 (São Paulo), inicialmente em modo de produção. Não foram ativados backups pagos.
+- Regras do Firestore publicadas no projeto tememcasa-2ab29.
+- Site público publicado no Netlify e domínio tememcasa-listas.netlify.app autorizado no Firebase Authentication.
+- HTML final validado; 23 testes de autenticação e 23 de comandos por voz aprovados. Tela de login HTTPS carregou sem erros ou avisos no console.
+
+CONFERIR COM SUA CONTA
+
+- Criar sua conta e testar verificação de e-mail, login, recuperação de senha e salvamento na URL publicada.
+- Configurar o Atalho Siri no seu iPhone e conferir o microfone com áudio real. A Alexa exige integração própria em uma etapa separada.
+
+O site está hospedado no Netlify. O Firebase cuida do login e do banco de dados. Nenhuma conta real ou senha foi criada para testar por você. A configuração do HTML usa somente os dados do aplicativo Web; senhas, chaves privadas e contas de serviço não devem ser colocadas no HTML ou enviadas pelo chat.
+
+PUBLICAÇÃO E PRÓXIMAS ATUALIZAÇÕES
+
+A publicação autorizada foi concluída em https://tememcasa-listas.netlify.app/. O pacote de publicação deve conter os 8 arquivos: index.html, _headers, manifest.webmanifest, apple-touch-icon.png, icon-192.png, icon-512.png, favicon.ico e favicon.svg. O site financeiro 4jfinance não foi alterado. Não houve instalação nem contratação de upgrade pago.
+
+1. A pasta preparada para publicação é work/netlify-deploy, contendo estes 8 arquivos na raiz: index.html, _headers, manifest.webmanifest, apple-touch-icon.png, icon-192.png, icon-512.png, favicon.ico e favicon.svg. Para futuras publicações manuais em https://app.netlify.com/, envie essa pasta atualizada. Guias, regras do Firestore, capturas e arquivos de desenvolvimento ficam fora da publicação. Se usar um ZIP de publicação, extraia-o primeiro. Este site estático não precisa de comando de build no Netlify.
+
+2. O domínio tememcasa-listas.netlify.app já consta em Firebase > Authentication > Configurações > Domínios autorizados. Se mudar o endereço ou adicionar um domínio próprio, atualize essa lista com o novo domínio, sem https:// nem caminhos.
+
+3. Abra o endereço HTTPS publicado, crie uma conta e confirme o e-mail recebido. Volte ao app e atualize a confirmação conforme a tela. Adicione um item de teste, aguarde o salvamento, saia e entre novamente. Confira os dados em outro aparelho com a mesma conta e teste a recuperação de senha.
+
+O modo ?demo=1 permanece isolado e serve para experimentar a interface. Ele não testa a conexão da conta com o Firebase. Abrir o HTML como file:// também não substitui o teste do site publicado.
+
+ÍCONE NO IPHONE
+
+Depois da atualização do site, atualize a página no Safari. Se já criou um atalho com a letra T, remova esse atalho da Tela de Início e adicione o site novamente para usar o novo ícone. O app continua exigindo internet e login; adicioná-lo à Tela de Início não habilita funcionamento offline.
+VOZ, SIRI E ALEXA
+
+O app aceita comandos para adicionar itens, procurar produtos e abrir telas. As inclusões passam por uma tela de revisão: confira item, quantidade e unidade antes de confirmar. Comandos não finalizam compras nem executam ações destrutivas automaticamente.
+
+Use o botão de microfone quando o navegador oferecer reconhecimento de fala e você autorizar o acesso. A interface e a disponibilidade da API foram conferidas; áudio real ainda não foi testado nesta configuração.
+
+Para a Siri, é necessário configurar um Atalho no seu iPhone. O app está preparado para receber uma frase no fragmento do endereço, por exemplo https://tememcasa-listas.netlify.app/#comando=Adicione%202%20sabonetes. O Atalho deve abrir esse link com a frase codificada; a inclusão continua dependendo da revisão e confirmação no app, depois do login. A frase é removida do endereço ao ser recebida. Nenhum Atalho foi instalado ou testado fisicamente em um iPhone nesta entrega.
+
+A Alexa não está conectada nesta versão. A integração exige uma skill própria e vinculação segura de conta, em uma etapa separada.
+
+DADOS ANTIGOS E USO DIÁRIO
+
+Exporte um backup na versão em que seus dados aparecem. Depois de entrar com a conta confirmada no site publicado, restaure o backup e aguarde o salvamento. Dados de file:// não passam automaticamente para HTTPS ou para outro domínio. Guarde o backup até conferir lista e despensa na nova conta.
+
+Cada conta terá a própria casa; e-mails diferentes não compartilham os dados automaticamente. Não há painel com acesso geral às casas nem convites de compartilhamento nesta versão.
+
+O modo com conta depende de internet. Uma compra só é confirmada depois que o servidor aceita o salvamento. O estado fica em temEmCasaUsers/{uid}/state/main, com controle de revisão e limite de cerca de 750 kB. Se o limite for atingido, exporte um backup e reduza o histórico antigo. Acompanhe uso e quotas no console Firebase.
+
+Se o login falhar, confira o projeto, o provedor E-mail/senha e o domínio autorizado. Se entrar mas não carregar ou salvar, confira a confirmação do e-mail e as regras do Firestore. Não libere regras gerais para contornar erros de permissão. Permissões sobrepostas no Firestore se somam; mantenha o acesso limitado à conta proprietária com e-mail verificado.
+
+Se o HTML for gerado novamente, mantenha work/firebase-config.js como fonte da configuração. Não substitua os valores configurados por exemplos antes de gerar ou publicar uma nova versão.
+
+REFERÊNCIAS OFICIAIS
+
+Firebase Web: https://firebase.google.com/docs/web/alt-setup
+E-mail e senha: https://firebase.google.com/docs/auth/web/password-auth
+Verificação e recuperação: https://firebase.google.com/docs/auth/web/manage-users
+Regras: https://firebase.google.com/docs/firestore/security/get-started
+Regras sobrepostas: https://firebase.google.com/docs/firestore/security/rules-structure
+Publicação Netlify: https://docs.netlify.com/deploy/create-deploys/
+

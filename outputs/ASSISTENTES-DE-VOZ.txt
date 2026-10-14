@@ -1,0 +1,81 @@
+TEM EM CASA? — COMANDOS COM SIRI E ALEXA
+
+SIRI NO IPHONE
+
+Use o app Atalhos do iPhone. A configuração abaixo precisa ser feita uma vez no próprio aparelho; o site não instala o atalho automaticamente.
+
+Antes de começar, abra o site no navegador que o atalho usará, entre na sua conta e confirme seu e-mail. Para manter o acesso entre aberturas, marque “Continuar conectado neste aparelho” somente se desejar. Se a sessão terminar, será necessário entrar novamente. O iPhone pode pedir desbloqueio antes de abrir o navegador.
+
+Criar o atalho
+
+1. Abra Atalhos, crie um novo atalho e dê a ele o nome “Tem em Casa”.
+2. Adicione “Ditar Texto” e escolha Português (Brasil).
+3. Adicione “Codificar URL”, usando o resultado de “Ditar Texto” como entrada. Se houver escolha entre codificar e decodificar, escolha codificar.
+4. Adicione a ação “Texto” com este conteúdo:
+
+   https://tememcasa-listas.netlify.app/#comando=[Texto Codificado]
+
+   Substitua https://tememcasa-listas.netlify.app/ pelo endereço completo do site, começando com https://, sem outro fragmento #.
+   No lugar de [Texto Codificado], insira a variável produzida pela ação “Codificar URL”. Não digite os colchetes nem o nome da variável como texto fixo.
+5. Adicione “Abrir URLs”, usando o resultado da ação “Texto”.
+6. Execute o atalho uma vez para conferir o endereço e autorizar o uso do microfone, se solicitado.
+
+A ordem é: Ditar Texto → Codificar URL → Texto com o endereço e o comando → Abrir URLs.
+
+Como usar
+
+Diga: “Siri, Tem em Casa”. Quando o ditado começar, fale, por exemplo:
+
+• “Adicionar dois sabonetes”.
+• “Adicionar três leites”.
+• “Abrir lista de compras”.
+• “Abrir despensa”.
+
+O site recebe o texto e usa a conta que estiver conectada naquele navegador. Confira o produto, a quantidade e a unidade na tela; confirme a inclusão antes de salvar. Se o reconhecimento não encontrar o produto ou ficar ambíguo, ajuste a escolha no app. Os exemplos precisam ser conferidos no seu iPhone, pois o reconhecimento depende do aparelho e do idioma.
+
+O comando é recebido no fragmento # da URL. Ele não contém senha, token de acesso ou identificador de conta. A gravação continua exigindo o login verificado e as regras do Firebase. Não coloque sua senha ou tokens nas ações do atalho.
+
+ALEXA — INTEGRAÇÃO FUTURA
+
+A Alexa ainda não está configurada para este app. Este material não cria uma skill, não vincula a sua conta Amazon e não publica um endpoint de voz.
+
+Para adicionar itens diretamente pela Alexa, será necessário criar uma custom skill em Português (Brasil), com intenções para adicionar produtos e consultar/abrir partes do app. Produto e quantidade serão parâmetros reconhecidos pela skill. Uma frase possível, após a configuração, seria: “Alexa, peça ao Tem em Casa para adicionar dois sabonetes”. O nome de invocação precisa ser definido e testado no console da Amazon.
+
+A integração deverá incluir:
+
+• Vinculação segura da conta Amazon à conta do app por OAuth, preferencialmente com authorization code. O login Firebase já existente precisa de uma camada adicional: ele não substitui sozinho os endpoints de autorização e troca de tokens desse fluxo.
+• Backend que valide as solicitações da Alexa e associe cada autorização à UID Firebase correta e a uma conta verificada. Se for usado endpoint HTTPS próprio, validar assinatura/certificado e timestamp conforme a documentação Amazon.
+• Identificador de operação para não repetir uma inclusão quando a Alexa reenviar a solicitação, além de transação e comparação de revisão para preservar alterações simultâneas de outros aparelhos.
+• Confirmação de produto/quantidade quando houver dúvida. Segredos e tokens de serviço devem permanecer no backend, fora do HTML e dos links.
+
+É possível desenvolver e hospedar uma skill Alexa-hosted pelo editor online do console Amazon, sem instalar ferramentas no computador. Ainda assim, a API de integração e a vinculação segura precisam ser implementadas, configuradas e testadas.
+
+Abrir o site é um recurso separado de alterar a lista. Com Alexa for Apps e uma skill preparada, a Alexa no celular pode abrir um site; em um Echo, o fluxo pode enviar um link para o telefone, que a pessoa toca para abrir. Não é uma automação pronta do navegador. A antiga solução no-code App/Website skill foi descontinuada.
+
+A API de listas nativas da Alexa também deixou de ser suportada em 1º de julho de 2024. Por isso, esta proposta usa uma skill própria e os dados do Tem em Casa?, sem depender da sincronização da lista de compras nativa da Alexa.
+
+FONTES OFICIAIS CONSULTADAS
+
+Apple — executar atalhos pela Siri e desbloqueio do aparelho:
+https://support.apple.com/pt-br/guide/shortcuts/apd07c25bb38/ios
+
+Apple — ações URL, Abrir URLs e codificação de texto:
+https://support.apple.com/pt-br/guide/shortcuts/apd68802640c/ios
+
+Apple — ditado no iPhone:
+https://support.apple.com/pt-br/guide/iphone/iph2c0651d2/ios
+
+Amazon — Alexa-hosted e editor online:
+https://developer.amazon.com/en-US/docs/alexa/hosted-skills/build-a-skill-end-to-end-using-an-alexa-hosted-skill.html
+
+Amazon — vinculação de contas:
+https://developer.amazon.com/docs/alexaplus/account-linking/add-account-linking.html
+
+Amazon — requisitos e validação de solicitações HTTPS:
+https://developer.amazon.com/en-US/docs/alexa/custom-skills/host-a-custom-skill-as-a-web-service.html
+
+Amazon — Alexa for Apps, abertura no celular e envio de links:
+https://developer.amazon.com/en-US/docs/alexa/alexa-for-apps/about-alexa-for-apps.html
+
+Amazon — recursos descontinuados:
+https://developer.amazon.com/en-US/docs/alexa/ask-overviews/deprecated-features.html

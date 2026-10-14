@@ -1,0 +1,262 @@
+{
+  "app": "Tem em Casa?",
+  "date": "2026-10-14",
+  "source": "Pasta original Lista de Compras",
+  "files": [
+    {
+      "path": "work/app.js",
+      "sha256": "fd0a596cb0441fc17566c0abb1ce26d0f910e100a3fdcf13f57211d9984d7648",
+      "bytes": 50577
+    },
+    {
+      "path": "work/engine.js",
+      "sha256": "136fad68650dfbed6be8461a9c5608df020292f9007582cc299166f244b011e1",
+      "bytes": 16758
+    },
+    {
+      "path": "work/cloud.js",
+      "sha256": "7b066cc72db54dd29f33b2d622369d9f365259e786a3ec198cc01272edf54915",
+      "bytes": 16097
+    },
+    {
+      "path": "work/firebase-config.js",
+      "sha256": "774cb72e785cf98e54d0eba2b5b2954d82833c5aaa2362b3f6534c9a634763b8",
+      "bytes": 424
+    },
+    {
+      "path": "work/auth-ui.js",
+      "sha256": "29193436754ca54501b15840906934accaff9c6663489d434bc98c0357c5384b",
+      "bytes": 7708
+    },
+    {
+      "path": "work/auth-markup.html",
+      "sha256": "64db63049a2059ce6cef13ee857f74771865dfc2dcbd60e82d26d15c17457995",
+      "bytes": 1652
+    },
+    {
+      "path": "work/auth.css",
+      "sha256": "c901dd31b8a8dfed8f3a82c26882d0264612d85df42eff85697d90afa24ca5bd",
+      "bytes": 15844
+    },
+    {
+      "path": "work/style.css",
+      "sha256": "092ee8ab92313720e16380268ed77d32f590b93e32cbc780d5e580961d0bca74",
+      "bytes": 93379
+    },
+    {
+      "path": "work/voice.js",
+      "sha256": "63c4f17ab899f989324d4a4d49f0dadba50777efe01ce86634ac287ff4f1c1f1",
+      "bytes": 19615
+    },
+    {
+      "path": "work/voice.css",
+      "sha256": "8a28655e9d4afdfd0e2213a756993d49b428fb4251aad032ffd3eb94ae02fad8",
+      "bytes": 5378
+    },
+    {
+      "path": "work/template.html",
+      "sha256": "efdeb35c001eb70a72ff0c7dfe47f494efef00ebfe7dce11f1860fff3bbf0b19",
+      "bytes": 4382
+    },
+    {
+      "path": "work/logo.svg",
+      "sha256": "28a744fd7ace6ef3dc2e11e44517f59cbdf8de556b77cc3abceca7e6fb4c46b4",
+      "bytes": 539
+    },
+    {
+      "path": "work/wordmark.svg",
+      "sha256": "49578fc96c45b121bce0f48d8846d2147f50c79b13226d6be8607fac4394890a",
+      "bytes": 1117
+    },
+    {
+      "path": "work/manifest.webmanifest",
+      "sha256": "421f13ada5de4be9f9ff4b26025879498b03ddf7fbc3a7fb3388029a6055cb0a",
+      "bytes": 572
+    },
+    {
+      "path": "work/build.cjs",
+      "sha256": "d41b4a7b677ad35160e3cf331da5d2c394e4ac96e92d6640504ab38dd0f188e6",
+      "bytes": 3689
+    },
+    {
+      "path": "work/generate-icons.cjs",
+      "sha256": "f2f5d64b0cff7e138f6b795c21673f3e005f48766bba66ab50d2a69ef2f4f7f8",
+      "bytes": 1764
+    },
+    {
+      "path": "work/package-netlify.cjs",
+      "sha256": "0ce1982d76a951aa0b7eeedfc07f45bc106b190b1d8f4ffea9fa9b3e2ab06ad5",
+      "bytes": 1769
+    },
+    {
+      "path": "work/preview-server.cjs",
+      "sha256": "f452e24ba52291f53cf36514c4551b5bf960da3607f7c810c8c47319a9b3ea56",
+      "bytes": 1701
+    },
+    {
+      "path": "work/firestore.rules",
+      "sha256": "bd96a014925810bdf81263986567fb1f88a647095b59b8bd83d5de334042158d",
+      "bytes": 1536
+    },
+    {
+      "path": "work/netlify-headers.txt",
+      "sha256": "9a4c5c598fc2f0357540a599b98fcd88f2aa6421bb99a8347207c0b91531a2eb",
+      "bytes": 162
+    },
+    {
+      "path": "work/setup-guide.txt",
+      "sha256": "1c42ab708320797ae8a6f5f70a6dce73f5dd3553981a75688ab7e23721d826a5",
+      "bytes": 6691
+    },
+    {
+      "path": "work/assistentes-voz.txt",
+      "sha256": "b6e50dcd2aa891f5702104a144a7b9d2de733498286f38b52f46eb74d67d32cf",
+      "bytes": 5806
+    },
+    {
+      "path": "work/engine-test.cjs",
+      "sha256": "5fe14029226443539e55e106f0262dd290b2594e6ed16bfa56a59e01938d8fe7",
+      "bytes": 6899
+    },
+    {
+      "path": "work/auth-ui-test.cjs",
+      "sha256": "4fe1db85781b1c5d176f4891843e42bb1e75f43cdee14c3f5cc224e70c1f753c",
+      "bytes": 21402
+    },
+    {
+      "path": "work/voice-test.cjs",
+      "sha256": "d028aa69dda4db8d79516214eb150bc7563dd766bc32d9983610f11da1308342",
+      "bytes": 16851
+    },
+    {
+      "path": "work/cloud-test.cjs",
+      "sha256": "c1762c00b562c40a49cd69664583140bdedfd8dd7fb59d5aa9924988b4f5370e",
+      "bytes": 16259
+    },
+    {
+      "path": "work/ui-smoke-test.cjs",
+      "sha256": "9a1fd8121f368124e5c63cd235409a7cf14b3f5fc13f8a2b03391e1f015d557f",
+      "bytes": 15227
+    },
+    {
+      "path": "work/validate-final.cjs",
+      "sha256": "14980e11a720bc816fe8216acd611b38fdfa76afd36fe7ba9aeb0a19ab3655db",
+      "bytes": 727
+    },
+    {
+      "path": "work/assets/catatau.png",
+      "sha256": "12119e0d60d20f4273aeae84ae48a8f540f82dfa043571a212efd78234873b8c",
+      "bytes": 1832753
+    },
+    {
+      "path": "work/assets/app-icons/apple-touch-icon.png",
+      "sha256": "293379d3a2779267c1114b65565c31c4768da49ead9ffc7619bcb87eb2bd64ed",
+      "bytes": 3682
+    },
+    {
+      "path": "work/assets/app-icons/favicon.ico",
+      "sha256": "ec3bd9ce0a843e3891b08c5726f5ee8d92a596ba4beaafcb1ae935cf7295cbe9",
+      "bytes": 2547
+    },
+    {
+      "path": "work/assets/app-icons/favicon.svg",
+      "sha256": "28a744fd7ace6ef3dc2e11e44517f59cbdf8de556b77cc3abceca7e6fb4c46b4",
+      "bytes": 539
+    },
+    {
+      "path": "work/assets/app-icons/icon-192.png",
+      "sha256": "4caca36152fda7455f4b2c154e8db2afc48088a83fcf49b9c29779abb681b85f",
+      "bytes": 3750
+    },
+    {
+      "path": "work/assets/app-icons/icon-512.png",
+      "sha256": "82b5de780376921ab9cccd3b2777b0ba3c96930053c4a7754bcd7ac2b787f3e9",
+      "bytes": 9633
+    },
+    {
+      "path": "work/assets/app-icons/source.sha256",
+      "sha256": "f82a6a27cc0892da561e0e9ba2e7419dbcdd458339c3b4addbf6a2b15ef5db0b",
+      "bytes": 65
+    },
+    {
+      "path": "outputs/apple-touch-icon.png",
+      "sha256": "293379d3a2779267c1114b65565c31c4768da49ead9ffc7619bcb87eb2bd64ed",
+      "bytes": 3682
+    },
+    {
+      "path": "outputs/ASSISTENTES-DE-VOZ.txt",
+      "sha256": "b6e50dcd2aa891f5702104a144a7b9d2de733498286f38b52f46eb74d67d32cf",
+      "bytes": 5806
+    },
+    {
+      "path": "outputs/CONFIGURAR-FIREBASE-NETLIFY.txt",
+      "sha256": "1c42ab708320797ae8a6f5f70a6dce73f5dd3553981a75688ab7e23721d826a5",
+      "bytes": 6691
+    },
+    {
+      "path": "outputs/favicon.ico",
+      "sha256": "ec3bd9ce0a843e3891b08c5726f5ee8d92a596ba4beaafcb1ae935cf7295cbe9",
+      "bytes": 2547
+    },
+    {
+      "path": "outputs/favicon.svg",
+      "sha256": "28a744fd7ace6ef3dc2e11e44517f59cbdf8de556b77cc3abceca7e6fb4c46b4",
+      "bytes": 539
+    },
+    {
+      "path": "outputs/firestore.rules",
+      "sha256": "bd96a014925810bdf81263986567fb1f88a647095b59b8bd83d5de334042158d",
+      "bytes": 1536
+    },
+    {
+      "path": "outputs/icon-192.png",
+      "sha256": "4caca36152fda7455f4b2c154e8db2afc48088a83fcf49b9c29779abb681b85f",
+      "bytes": 3750
+    },
+    {
+      "path": "outputs/icon-512.png",
+      "sha256": "82b5de780376921ab9cccd3b2777b0ba3c96930053c4a7754bcd7ac2b787f3e9",
+      "bytes": 9633
+    },
+    {
+      "path": "outputs/index.html",
+      "sha256": "b4a0856f56cc6b67dcdab48c74f656ee84b0ef5880c66f2293a5353cd80bbd19",
+      "bytes": 2677238
+    },
+    {
+      "path": "outputs/LEIA-ME.txt",
+      "sha256": "18e0df79b147c0685b71c8d61528b08848318bf19e8f0926426f57badb451b80",
+      "bytes": 879
+    },
+    {
+      "path": "outputs/manifest.webmanifest",
+      "sha256": "0a24caafc2378d5d26094e00385bae59f3b545a41067cf3f41fb1f4a8d84e8ea",
+      "bytes": 602
+    },
+    {
+      "path": "outputs/tem-em-casa-icone.svg",
+      "sha256": "28a744fd7ace6ef3dc2e11e44517f59cbdf8de556b77cc3abceca7e6fb4c46b4",
+      "bytes": 539
+    },
+    {
+      "path": "outputs/tem-em-casa-logo.svg",
+      "sha256": "49578fc96c45b121bce0f48d8846d2147f50c79b13226d6be8607fac4394890a",
+      "bytes": 1117
+    },
+    {
+      "path": "outputs/_headers",
+      "sha256": "9a4c5c598fc2f0357540a599b98fcd88f2aa6421bb99a8347207c0b91531a2eb",
+      "bytes": 162
+    },
+    {
+      "path": "work/auth-rules-qa/rules.test.cjs",
+      "sha256": "76ead5d100677808f33972299eb995907dab633c3cde32c0cd6d9fd381e6de20",
+      "bytes": 6737
+    },
+    {
+      "path": "work/auth-rules-qa/run-local.cjs",
+      "sha256": "8dd68a60f5d2447ca52f7f4c0decfeb92796f5df70be624a519c924084c1af21",
+      "bytes": 2210
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // If this project already has rules, merge this exact match into them.
+    // Remove overlapping public/broad allow rules: matching allows are additive.
+    match /temEmCasaUsers/{uid}/state/main {
+      function owner() {
+        return request.auth != null
+          && request.auth.uid == uid
+          && request.auth.token.email_verified == true;
+      }
+      function validState() {
+        let data = request.resource.data;
+        return data.keys().hasAll(['ownerUid', 'schemaVersion', 'revision', 'payload', 'updatedAt'])
+          && data.keys().hasOnly(['ownerUid', 'schemaVersion', 'revision', 'payload', 'updatedAt'])
+          && data.ownerUid is string && data.ownerUid == uid
+          && data.schemaVersion is int && data.schemaVersion == 1
+          && data.revision is int && data.revision >= 1 && data.revision <= 2147483647
+          && data.payload is string && data.payload.size() > 0 && data.payload.size() <= 750000
+          && data.updatedAt is timestamp && data.updatedAt == request.time;
+      }
+      allow get: if owner();
+      allow list: if false;
+      allow create: if owner() && validState() && request.resource.data.revision == 1;
+      allow update: if owner() && validState()
+        && resource.data.ownerUid == uid
+        && request.resource.data.ownerUid == resource.data.ownerUid
+        && request.resource.data.revision == resource.data.revision + 1;
+      allow delete: if false;
+    }
+  }
+}

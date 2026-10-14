@@ -1,0 +1,9 @@
+TEM EM CASA? — COMPRAS E DESPENSA
+
+Aplicativo com login, cadastro, confirmação de e-mail e recuperação de senha pelo Firebase.
+
+A configuração Web do projeto tememcasa-2ab29 já está incluída. Consulte CONFIGURAR-FIREBASE-NETLIFY.txt para o estado da publicação. Para o Netlify, envie estes 8 arquivos na raiz de uma pasta limpa: index.html, _headers, manifest.webmanifest, apple-touch-icon.png, icon-192.png, icon-512.png, favicon.ico e favicon.svg. Os ícones permitem reconhecer o site na Tela de Início do celular. O aplicativo continua precisando de internet e login.
+
+Cada conta tem sua própria lista, despensa e histórico. Precisa de internet. A casa de exemplo (?demo=1) fica separada neste navegador.
+
+O botão de voz permite revisar comandos antes de salvar. Siri precisa de um atalho no iPhone. Alexa depende de uma skill própria ainda não conectada.
