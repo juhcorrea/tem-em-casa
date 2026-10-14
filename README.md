@@ -6,7 +6,7 @@ Site existente: https://tememcasa-listas.netlify.app/
 
 ## Originais preservados
 
-Este repositório privado guarda cópias exatas dos arquivos de desenvolvimento e da entrega local de 14/10/2026. A conferência de integridade está em source-manifest.json. Os arquivos originais do computador não foram alterados.
+Este repositório público guarda os arquivos originais e a configuração de publicação. A cópia inicial preservou os bytes dos arquivos de desenvolvimento e da entrega local de 14/10/2026. A conferência de integridade está em source-manifest.json. Os arquivos originais do computador não foram alterados.
 
 - work/: fontes HTML, CSS, JavaScript, logo, imagens, scripts de montagem e verificações.
 - outputs/: HTML final e arquivos de entrega, incluindo ícones para a Tela de Início.
@@ -27,6 +27,13 @@ Verificações existentes: node work/engine-test.cjs, node work/auth-ui-test.cjs
 
 ## Publicação
 
-Guardar o código no GitHub não altera o site já publicado e não configura deploy automático. Para uma publicação futura, node work/package-netlify.cjs prepara somente os oito arquivos públicos necessários. Não publique a pasta inteira do repositório.
+O arquivo `netlify.toml` prepara a integração com o projeto existente `tememcasa-listas`. A conexão do repositório e a ativação da publicação automática são configuradas no painel do Netlify, usando a branch `main`.
+
+- Edite os fontes em `work/` (template, estilos e módulos JavaScript). O HTML em `outputs/` é gerado pela montagem.
+- Comando de build: `node work/build.cjs && node work/package-netlify.cjs`.
+- Pasta publicada: `work/netlify-deploy`, com somente os oito arquivos públicos necessários, incluindo os ícones.
+- Node.js 22; a montagem não instala dependências.
+
+Depois de conectar o GitHub e ativar a publicação no Netlify, cada alteração enviada para `main` dispara a montagem e atualização do site. A publicação exige créditos disponíveis na conta. Uma publicação bloqueada mantém a versão anterior no ar. Não publique a pasta inteira do repositório.
 
 A configuração Firebase Web presente no aplicativo é a configuração cliente já utilizada pelo site. O repositório não contém senhas, tokens administrativos, contas de serviço, exportações de contas ou dados do banco. O acesso aos dados continua dependendo da autenticação e das regras do Firebase.
